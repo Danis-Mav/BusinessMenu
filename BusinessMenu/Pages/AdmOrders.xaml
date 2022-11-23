@@ -1,0 +1,93 @@
+﻿<Page x:Class="BusinessMenu.Pages.AdmOrders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BusinessMenu.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdmOrders">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Back" 
+                FontSize="20"
+                Background="Aqua"
+                Grid.Column="0" 
+                Grid.Row="0"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="40" 
+                Width="100" 
+                Margin="0,10,0,10"
+                Click="Button_Click" />
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <TextBlock Text="Заказы" 
+                       FontSize="40"
+                       Foreground="Wheat"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Height="800" >
+            <ListView  x:Name="Orders" ItemsSource="{Binding order}" Height="800" SelectionChanged="Orders_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="200"  Header="№" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding idOrder}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="300"  Header="№ Стола" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding idStol}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="400"  Header="Стоимость" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="30"  Text="{Binding FullPrice}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel 
+            Grid.Column="1" 
+            Grid.Row="2"
+            VerticalAlignment="Bottom"
+            Margin="10">
+        </StackPanel>
+        <Button
+            Content="Перейти к заказу" 
+                FontSize="20"
+                Background="Aqua"
+                x:Name="DoOrder" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="70" 
+                Width="300" 
+                Margin="0,50,0,10"
+                Click="GotoOrder_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,130 @@
+﻿<Page x:Class="BusinessMenu.Pages.StopListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BusinessMenu.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StopListPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Back" 
+                FontSize="20"
+                Background="Aqua"
+                Grid.Column="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Height="40" 
+                Width="100" 
+                Margin="10,0,0,0"
+                Click="Button_Click" Grid.ColumnSpan="2" />
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <TextBlock Text="Стоп-лист" 
+                       Margin="20"
+                       FontSize="40"
+                       Foreground="Wheat"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Height="800" Margin="20">
+            <ListView  x:Name="prod" ItemsSource="{Binding menu2show}" Height="800">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="№" Width="30" DisplayMemberBinding="{Binding IDmenu}" />
+
+                        <GridViewColumn Header="Фото" Width="300">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding img}" Height="200" Margin="10"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        
+                        <GridViewColumn Width="300"  Header="Название блюда" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding NameDish}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="200"  Header="Страна" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding Type.NameType}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="200"  Header="Тип" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding Country.NameCountry}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+
+                        <GridViewColumn Width="400"  Header="Описание" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="15"  Text="{Binding description}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        <GridViewColumn Width="100"  Header="Цена" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="WrapWithOverflow" FontSize="30"  Text="{Binding Price}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel 
+            Grid.Column="1" 
+            Grid.Row="2"
+            VerticalAlignment="Bottom"
+            Margin="10">
+            <Label x:Name="Total"
+               FontSize="30"
+               Foreground="White"/>
+            <TextBlock FontSize="15" 
+                   TextWrapping="WrapWithOverflow" 
+                   Foreground="White"
+                   Text="{Binding IDorder}"/>
+        </StackPanel>
+        <Button
+            Content="Убрать из стоп-листа" 
+                FontSize="20"
+                Background="Aqua"
+                x:Name="DoOrder" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="70" 
+                Width="300" 
+                Margin="0,10,0,10"
+                Click="DeleteSL_Click"/>
+    </Grid>
+</Page>
