@@ -106,7 +106,7 @@
         <StackPanel Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Height="600">
             <Button Content="Горячие блюда" FontSize="20" Height="120" Background="Green" Click="Button_hotDish"/>
             <Button Content="Холодные блюда" FontSize="20" Height="120" Background="Green" Click="Button_coldDish"/>
-            <Button Content="Закуски" FontSize="20" Height="120" Background="Green" Click="Button_Snacks"/>
+            <Button Content="Закуски" FontSize="20" Height="120" Background="Green" Click="Button_Snacks" Cursor="Hand"/>
             <Button Content="Напитки" FontSize="20" Height="120" Background="Green" Click="Button_Salad" Cursor="Hand"/>
             <Button Content="Салаты" FontSize="20" Height="120" Background="Green" Click="Button_Drinks"/>
         </StackPanel>
@@ -122,7 +122,7 @@
                 Height="50" 
                 Width="200" 
                 Visibility="Visible"
-                Click="ToOrderDish_Button"/>
+                Click="ToOrderDish_Button" Cursor="Hand"/>
         <Button Content="Перейти к заказу" 
                 FontSize="20"
                 Background="Green"

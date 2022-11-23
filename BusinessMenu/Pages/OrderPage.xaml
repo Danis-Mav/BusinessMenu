@@ -49,13 +49,7 @@
             <ListView  x:Name="prod" ItemsSource="{Binding OrderMenu}" Height="600">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="30"  Header="№" >
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock FontSize="15" TextWrapping="WrapWithOverflow"  Text="{Binding IDom}"></TextBlock>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        
                         <GridViewColumn Width="300"  Header="Название блюда" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -70,7 +64,7 @@
                                     <TextBlock x:Name="Cena" FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding menu.Price}"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        </GridViewColumn>   
 
                     </GridView>
                 </ListView.View>
@@ -81,14 +75,15 @@
             Grid.Row="2"
             VerticalAlignment="Bottom"
             Margin="10">
-        <Label x:Name="Total"
-               FontSize="30"
-               Foreground="White"/>
         
-        <TextBlock FontSize="15" 
+        
+        <TextBlock FontSize="30" 
                    TextWrapping="WrapWithOverflow" 
                    Foreground="White"
-                   Text="Итого{Binding IDorder}"/>
+                   Text="Итого"/>
+            <Label x:Name="Total"
+               FontSize="30"
+               Foreground="White"/>
         </StackPanel>
         <Button
             Content="Сделать заказ" 

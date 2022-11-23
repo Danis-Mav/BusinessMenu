@@ -21,7 +21,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Back" 
+        <Button Content="Назад" 
                 FontSize="20"
                 Background="Green"
                 Grid.Column="0" 

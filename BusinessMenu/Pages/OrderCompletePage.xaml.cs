@@ -55,7 +55,7 @@ namespace BusinessMenu.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new AdmOrders());
         }
     }
 }

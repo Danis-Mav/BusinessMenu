@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="RedPage">
 
     <Grid>
@@ -27,9 +27,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button FontSize="20" Background="Aqua" x:Name="btn_back" Content="Назад" Grid.Column="0" Grid.Row="0" Height="50" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_back_Click" Margin="20"/>
-        <Button FontSize="20" Background="Aqua" x:Name="btn_save" Content="Сохранить" Grid.Column="3" Grid.Row="0" Height="60" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_save_Click" Margin="20"/>
-        <Button FontSize="20" Background="Aqua" x:Name="btn_delite" Content="Удалить" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="200" Click="btn_delite_Click" Margin="20"/>
+        <Button FontSize="20" Background="Green" x:Name="btn_back" Content="Назад" Grid.Column="0" Grid.Row="0" Height="50" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_back_Click" Margin="20" Cursor="Hand"/>
+        <Button FontSize="20" Background="Green" x:Name="btn_save" Content="Сохранить" Grid.Column="3" Grid.Row="0" Height="60" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_save_Click" Margin="20"/>
+        <Button FontSize="20" Background="Green" x:Name="btn_delite" Content="Удалить" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="200" Click="btn_delite_Click" Margin="20"/>
 
         <TextBlock FontSize="30" Text="ID" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20"/>
         <TextBlock FontSize="30" Text="Название" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20"/>
@@ -51,11 +51,11 @@
         </StackPanel>
 
         <StackPanel x:Name="sp_country" Grid.Column="1" Grid.Row="5" Grid.RowSpan="6">
-            <ComboBox Name="cb_country" Margin="10" Height="40" Width="300" Background="Aqua"/>
+            <ComboBox Name="cb_country" Margin="10" Height="40" Width="300" Background="Green"/>
         </StackPanel>
 
         <Image x:Name="img_prod" Source="{Binding img}" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="5" Margin="15"  VerticalAlignment="Center" Height="300" Width="300"/>
-        <Button Background="Aqua" FontSize="20" x:Name="btn_newphoto" Content="Добавить фото" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Center" Width="200" Click="btn_newphoto_Click"/>
+        <Button Background="Green" FontSize="20" x:Name="btn_newphoto" Content="Добавить фото" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Center" Width="200" Click="btn_newphoto_Click"/>
 
     </Grid>
 </Page>
