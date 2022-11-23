@@ -43,11 +43,11 @@
         <TextBox FontSize="30" x:Name="tb_description" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="300" />
         <TextBox FontSize="30" x:Name="tb_price" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="200" PreviewTextInput="tb_price_PreviewTextInput"/>
         <StackPanel  x:Name="sp_unit" Grid.Column="1" Grid.Row="4" Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <RadioButton FontSize="30" x:Name="rb_hd" GroupName="unit" Content="hd" Margin="10" />
-            <RadioButton FontSize="30" x:Name="rb_cd" GroupName="unit" Content="cd" Margin="10"/>
-            <RadioButton FontSize="30" x:Name="rb_zak" GroupName="unit" Content="zak" Margin="10"/>
-            <RadioButton FontSize="30" x:Name="rb_sd" GroupName="unit" Content="sd" Margin="10"/>
-            <RadioButton FontSize="30" x:Name="rb_dr" GroupName="unit" Content="dr" Margin="10"/>
+            <RadioButton FontSize="30" x:Name="rb_hd" GroupName="unit" Content="Г/б" Margin="10" />
+            <RadioButton FontSize="30" x:Name="rb_cd" GroupName="unit" Content="С/б" Margin="10"/>
+            <RadioButton FontSize="30" x:Name="rb_zak" GroupName="unit" Content="З-ки" Margin="10"/>
+            <RadioButton FontSize="30" x:Name="rb_sd" GroupName="unit" Content="С-ты" Margin="10"/>
+            <RadioButton FontSize="30" x:Name="rb_dr" GroupName="unit" Content="Н-ки" Margin="10"/>
         </StackPanel>
 
         <StackPanel x:Name="sp_country" Grid.Column="1" Grid.Row="5" Grid.RowSpan="6">

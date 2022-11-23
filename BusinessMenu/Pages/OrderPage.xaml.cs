@@ -66,9 +66,9 @@ namespace BusinessMenu.Pages
             b.IsComplete = true;
             DBConnection.connection.Order.Add(b);
             DBConnection.connection.SaveChanges();
-             
             MessageBox.Show("Заказ сделан");
             blogNum = 0;
+            NavigationService.Navigate(new MainPage());
 
         }
 
