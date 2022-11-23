@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AdmOrders">
@@ -22,7 +23,7 @@
 
         <Button Content="Back" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 Grid.Column="0" 
                 Grid.Row="0"
                 HorizontalAlignment="Center" 
@@ -30,7 +31,7 @@
                 Height="40" 
                 Width="100" 
                 Margin="0,10,0,10"
-                Click="Button_Click" />
+                Click="Button_Click" Cursor="Hand" />
         <StackPanel Grid.Column="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -79,7 +80,7 @@
         <Button
             Content="Перейти к заказу" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="DoOrder" 
                 Grid.Column="1" 
                 Grid.Row="2"
@@ -88,6 +89,6 @@
                 Height="70" 
                 Width="300" 
                 Margin="0,50,0,10"
-                Click="GotoOrder_Click"/>
+                Click="GotoOrder_Click" Cursor="Hand"/>
     </Grid>
 </Page>

@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="MenuPage">
 
@@ -28,7 +29,7 @@
 
         <Button Content="Назад" 
                 FontSize="15"
-                Background="Aqua"
+                Background="Green"
                 Grid.Column="0" 
                 Grid.Row="0"
                 HorizontalAlignment="Center" 
@@ -39,11 +40,11 @@
                 Margin="0,20,0,10" 
                 Click="Back_Click" />
         <StackPanel Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="2" Height="200" >
-            <Button Content="Все блюда" FontSize="20" Height="120" Background="#99ff99" Click="Button_allDish"/>
+            <Button Content="Все блюда" FontSize="20" Height="120" Background="Green" Click="Button_allDish" Cursor="Hand"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="1" Height="700" >
-            <ListView  x:Name="prod" ItemsSource="{Binding menu2show}" Height="700" SelectionChanged="prod_SelectionChanged">
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="1" Height="750" Background="AliceBlue">
+            <ListView  x:Name="prod" ItemsSource="{Binding menu2show}" Height="700" SelectionChanged="prod_SelectionChanged" Background="Aqua">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="№" Width="30" DisplayMemberBinding="{Binding IDmenu}" />
@@ -103,28 +104,28 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Height="600">
-            <Button Content="Горячие блюда" FontSize="20" Height="120" Background="#99ff99" Click="Button_hotDish"/>
-            <Button Content="Холодные блюда" FontSize="20" Height="120" Background="#99ff99" Click="Button_coldDish"/>
-            <Button Content="Закуски" FontSize="20" Height="120" Background="#99ff99" Click="Button_Snacks"/>
-            <Button Content="Напитки" FontSize="20" Height="120" Background="#99ff99" Click="Button_Salad"/>
-            <Button Content="Салаты" FontSize="20" Height="120" Background="#99ff99" Click="Button_Drinks"/>
+            <Button Content="Горячие блюда" FontSize="20" Height="120" Background="Green" Click="Button_hotDish"/>
+            <Button Content="Холодные блюда" FontSize="20" Height="120" Background="Green" Click="Button_coldDish"/>
+            <Button Content="Закуски" FontSize="20" Height="120" Background="Green" Click="Button_Snacks"/>
+            <Button Content="Напитки" FontSize="20" Height="120" Background="Green" Click="Button_Salad"/>
+            <Button Content="Салаты" FontSize="20" Height="120" Background="Green" Click="Button_Drinks"/>
         </StackPanel>
         <Button Content="Добавить в заказ" 
-                Background="Aqua"
+                Background="Green"
                 FontSize="15"
                 x:Name="ToOrderDish" 
-                Grid.Column="4" 
+                Grid.Column="3" 
                 Grid.Row="2" 
                 HorizontalAlignment="Left" 
                 Margin="0,0,10,0"  
                 VerticalAlignment="Center" 
                 Height="50" 
-                Width="150" 
+                Width="200" 
                 Visibility="Visible"
                 Click="ToOrderDish_Button"/>
         <Button Content="Перейти к заказу" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="GoOrder" 
                 Grid.Column="6" 
                 Grid.Row="2"
@@ -139,7 +140,7 @@
         <!--Admin-->
         <Button Content="Добавить блюдо" 
                 FontSize="15"
-                Background="Aqua"
+                Background="Green"
                 x:Name="AddDish" 
                 Grid.Column="5" 
                 Grid.Row="2"
@@ -152,7 +153,7 @@
                 Click="AddDish_Click"/>
         <Button Content="Редактировать блюдо" 
                 FontSize="15"
-                Background="Aqua"
+                Background="Green"
                 x:Name="RedDish" 
                 Grid.Column="3" 
                 Grid.Row="2"
@@ -165,7 +166,7 @@
                 Click="RedDish_Click"/>
         <Button Content="Заказы" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="Orders" 
                 Grid.Column="6" 
                 Grid.Row="2"
@@ -179,7 +180,7 @@
                 Click="Orders_Click"/>
         <Button Content="Стоп лист" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="StopList" 
                 Grid.Column="3" 
                 Grid.Row="0"
@@ -193,7 +194,7 @@
                 Click="StopList_Click"/>
         <Button Content="Добавить в стоп-лист" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="RedStopList" 
                 Grid.Column="3" 
                 Grid.Row="0"

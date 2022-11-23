@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="StopListPage">
 
@@ -20,9 +21,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Back" 
+        <Button Content="Назад" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 Grid.Column="0"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center" 
@@ -116,7 +117,7 @@
         <Button
             Content="Убрать из стоп-листа" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="DoOrder" 
                 Grid.Column="1" 
                 Grid.Row="2"

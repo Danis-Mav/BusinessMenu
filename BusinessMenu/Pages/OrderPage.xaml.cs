@@ -63,7 +63,7 @@ namespace BusinessMenu.Pages
             var b = new Order();
             b.FullPrice = blogNum;
             b.idStol = 1;
-            b.IsComplete = false;
+            b.IsComplete = true;
             DBConnection.connection.Order.Add(b);
             DBConnection.connection.SaveChanges();
              

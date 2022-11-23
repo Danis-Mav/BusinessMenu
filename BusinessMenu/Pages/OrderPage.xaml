@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrderPage">
 
@@ -20,9 +21,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Back" 
+        <Button Content="Назад" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 Grid.Column="0" 
                 Grid.Row="0"
                 HorizontalAlignment="Center" 
@@ -83,15 +84,16 @@
         <Label x:Name="Total"
                FontSize="30"
                Foreground="White"/>
+        
         <TextBlock FontSize="15" 
                    TextWrapping="WrapWithOverflow" 
                    Foreground="White"
-                   Text="{Binding IDorder}"/>
+                   Text="Итого{Binding IDorder}"/>
         </StackPanel>
         <Button
             Content="Сделать заказ" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 x:Name="DoOrder" 
                 Grid.Column="1" 
                 Grid.Row="2"
@@ -104,14 +106,14 @@
         <Button
             Content="Удалить блюдо" 
                 FontSize="15"
-                Background="Aqua"
+                Background="Green"
                 x:Name="DeleteDish" 
                 Grid.Column="2" 
                 Grid.Row="2"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Height="50" 
-                Width="100" 
+                Width="150" 
                 Margin="0,10,0,10"
                 Click="DeleteDish_Click"/>
     </Grid>

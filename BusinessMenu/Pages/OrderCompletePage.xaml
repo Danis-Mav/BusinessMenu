@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrderCompletePage">
 
@@ -20,9 +21,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Back" 
+        <Button Content="Назад" 
                 FontSize="20"
-                Background="Aqua"
+                Background="Green"
                 Grid.Column="0" 
                 Grid.Row="0"
                 HorizontalAlignment="Center" 
@@ -37,10 +38,10 @@
                     Orientation="Horizontal">
             <TextBlock Text="Заказ №" 
                        FontSize="40"
-                       Foreground="Wheat"/>
+                       Foreground="Green"/>
             <TextBlock x:Name="Nomer"
                FontSize="40"
-               Foreground="Wheat"
+               Foreground="Green"
                 />
         </StackPanel>
 
@@ -97,7 +98,7 @@
         <Button
             Content="Подтвердить готовку" 
                 FontSize="30"
-                Background="Aqua"
+                Background="Green"
                 x:Name="DoOrder" 
                 Grid.Column="1" 
                 Grid.Row="2"

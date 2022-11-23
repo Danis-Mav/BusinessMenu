@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BusinessMenu.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="MainPage">
 
@@ -17,15 +18,15 @@
                 Width="400"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Background="Aquamarine"
+                Background="Green"
                 Click="Button_Click"
                 />
 
         <Button FontSize="15" 
                 Content="для Администраторов" 
                 Height="70" 
-                Width="150" 
-                Background="Aquamarine"
+                Width="200" 
+                Background="Green"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Click="Login_Click"/>
