@@ -107,7 +107,7 @@
             <Button Content="Горячие блюда" FontSize="20" Height="120" Background="Green" Click="Button_hotDish"/>
             <Button Content="Холодные блюда" FontSize="20" Height="120" Background="Green" Click="Button_coldDish"/>
             <Button Content="Закуски" FontSize="20" Height="120" Background="Green" Click="Button_Snacks"/>
-            <Button Content="Напитки" FontSize="20" Height="120" Background="Green" Click="Button_Salad"/>
+            <Button Content="Напитки" FontSize="20" Height="120" Background="Green" Click="Button_Salad" Cursor="Hand"/>
             <Button Content="Салаты" FontSize="20" Height="120" Background="Green" Click="Button_Drinks"/>
         </StackPanel>
         <Button Content="Добавить в заказ" 
